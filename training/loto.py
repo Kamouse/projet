@@ -1,19 +1,15 @@
-import random 
+import random
 
-nombre1 = random.randint(1, 50)
-nombre2 = random.randint(1, 50)
-nombre3 = random.randint(1, 50)
-nombre4 = random.randint(1, 50)
-nombre5 = random.randint(1, 50)
-numeroChance1 = random.randint(1, 12)
-numeroChance2 = random.randint(1, 12)
+lst = []
 
-while nombre1 == nombre2 or nombre1 == nombre3 or nombre1 == nombre4 or nombre1 == nombre5 or nombre2 == nombre3 or nombre2 == nombre4 or nombre2 == nombre5 or nombre3 == nombre4 or nombre3 == nombre5 or nombre4 == nombre5 or nombre5 == nombre1:
-    nombre1 = random.randint(1, 50)
-    nombre2 = random.randint(1, 50)
-    nombre3 = random.randint(1, 50)
-    nombre4 = random.randint(1, 50)
-    nombre5 = random.randint(1, 50)
+while len(lst) < 7:
+    if(len(lst) < 5):
+        max = 50
+    else:
+        max = 12
 
+    num = random.randint(1,max+1)
+    if(num not in lst):
+        lst.append(num)
 
-print("nombre1", nombre1, "nombre2", nombre2, "nombre3", nombre3, "nombre4", nombre4, "nombre5", nombre5,"numeroChance1", numeroChance1 ,"numeroChance2", numeroChance2)
+print(lst)
